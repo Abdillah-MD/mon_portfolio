@@ -12,11 +12,19 @@
     flex-direction: row;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+        height: 100vh;
+        background: none;
     }
     // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
     article {
         width: 50%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
     }
 
     &__text {
@@ -27,9 +35,17 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
-
+        @media screen and (max-width: 768px) {
+            padding: 10px 20px;
+            margin: 0;
+            width: 100%;
+            height: auto; 
+        }
         h1 {
             font-size: 50px;
+            @media screen and (max-width: 768px) {
+                font-size: 28px;
+            }
         }
 
         p {
@@ -47,13 +63,25 @@
 
     &__img {
         position: relative;
+        @media screen and (max-width: 768px) {
+            height: 500px;
+            width: 100%;
+        }
         &-content {
             position: absolute;
             width: 30vw;
             height: 35vh;
             right: 25%;
             bottom: 35%;
-
+            @media screen and (max-width: 768px) {
+                padding: 10px 20px;
+                margin: 20px 0 0 0;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate( -50%, -50% );
+            }
             // background-color: yellow;
             @media screen and (min-width: 768px) {
                 bottom: 25%;
@@ -68,7 +96,13 @@
                 left: 50%;
                 top: 60%;
                 transform: translate(-50%, -50%);
-
+                @media screen and (max-width: 768px) {
+                    top: 50%;
+                    left: 50%;
+                    width: 90%;
+                    transform: translate( -50%, -50%);
+                    -webkit-transform: translate( -50%, -50%);
+                }
                 @media screen and (min-width: 1024px) {
                     width: 140%;
                     height: 140%;
@@ -84,7 +118,13 @@
                 left: 50%;
                 top: 60%;
                 transform: translate(-50%, -50%) rotate(-20deg);
-
+                @media screen and (max-width: 768px) {
+                    width: 115%;
+                    top: 45%;
+                    left: 57%;
+                    transform: translate( -50%, -50% );
+                    -webkit-transform: translate( -50%, -50% );
+                }
                 svg {
                     width: 100%;
                     height: 100%;
@@ -98,6 +138,12 @@
                 left: 60%;
                 top: 30%;
                 transform: translate(-50%, -50%);
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    top: 45%;
+                    left: 57%;
+                    transform: translate( -50%, -50% );
+                }
             }
         }
 
@@ -137,6 +183,10 @@
     &__text {
         text-align: center;
         padding: 0 140px;
+        @media screen and (max-width: 768px) {
+            padding: 0 20px;
+            
+        }
     }
 
     &__programation {
