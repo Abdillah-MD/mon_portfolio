@@ -1,0 +1,12 @@
+@keyframes turnAround {
+    0% {
+        left: 50%;
+        top: 60%;
+        transform: translate( -50%, -50%) rotate(0);
+    }
+    100% {
+        left: 50%;
+        top: 60%;
+        transform: translate( -50%, -50%) rotate(359deg);
+    }
+}

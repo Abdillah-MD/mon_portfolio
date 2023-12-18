@@ -1,0 +1,382 @@
+// Section developpeur
+.developer {
+    height: 90vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 40px 50px;
+    background: url('/assets/images/svg/Vector1.svg'), url('/assets/images/svg/Vector2.svg');
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%, 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
+    article {
+        width: 50%;
+    }
+
+    &__text {
+        padding: 20px 80px;
+        height: 50%;
+        margin: 150px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            margin: 50px auto 60px auto;
+        }
+
+        button {
+            @include bouton();
+
+            .fa-chevron-right {
+                font-size: 10px;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        &-content {
+            position: absolute;
+            width: 30vw;
+            height: 35vh;
+            right: 25%;
+            bottom: 35%;
+
+            // background-color: yellow;
+            @media screen and (min-width: 768px) {
+                bottom: 25%;
+            }
+
+            overflow: visible;
+
+            &-1 {
+                position: absolute;
+                width: 165%;
+                height: 165%;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+
+                @media screen and (min-width: 1024px) {
+                    width: 140%;
+                    height: 140%;
+                    top: 30%;
+                    left: 60%;
+                }
+            }
+
+            &-2 {
+                position: absolute;
+                width: 220%;
+                height: 220%;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%) rotate(-20deg);
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            // Photo Abdillah 
+            &-3 {
+                position: absolute;
+                width: 130%;
+                left: 60%;
+                top: 30%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .content__hello {
+            width: 200px;
+            background: white;
+            border-radius: 15px 15px 0;
+            height: 60px;
+            display: flex;
+            padding: 10px 15px;
+            box-shadow: 3px 3px 33px #cfcfcf;
+            align-items: center;
+            z-index: 10;
+
+            .main {
+                width: 20%;
+                font-size: 30px;
+            }
+
+            .abdillah {
+                width: 80%;
+
+            }
+        }
+    }
+}
+
+// Section langues informatique 
+.langue {
+    margin: 0;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        text-align: center;
+        padding: 0 140px;
+    }
+
+    &__programation {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 30%;
+        }
+
+        .num_1 {
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            padding: 10px 15px;
+            border-radius: 25px;
+            background-color: $main-color;
+            color: $btn-text-color;
+            font-weight: bold;
+        }
+
+        .num_1::after {
+            position: absolute;
+            content: " ";
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+            height: 2500px;
+            border-left: 3px dashed $main-color;
+            display: block;
+            z-index: -1;
+        }
+        // Partie html
+        &--html {
+            @include langueArticleDisplay();
+
+            &-img {
+                text-align: right;
+                width: 43%
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 0 25px 25px 0;
+            }
+        }
+        // Partie Css
+        &--css {
+            @include langueArticleDisplay(row-reverse);
+            &-img {
+                text-align: left;
+                width: 43%
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 25px 0 0 25px;
+            }
+        }
+        // Partie Javascript
+        &--js {
+            @include langueArticleDisplay(row);
+            &-img {
+                text-align: right;
+                width: 43%
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 0 25px 25px 0;
+            }
+        }
+        // Partie sass
+        &--sass {
+            @include langueArticleDisplay(row-reverse);
+            &-img {
+                text-align: left;
+                width: 43%
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 25px 0 0 25px;
+            }
+        }
+        // Partie react
+        &--react {
+            @include langueArticleDisplay(row);
+            &-img {
+                text-align: right;
+                width: 43%
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 0 25px 25px 0;
+            }
+        }
+    }
+}
+
+// Section mes outils 
+.outils {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    background-color: #eeeeee;
+    margin: 50px 0 0 0 ;
+    h2 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate( -50%, -50%);
+    }
+    &_img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 50px;
+        &-1 {
+            width: 5%;
+            object-fit: contain;
+        }
+        &-2 {
+            width: 10%;
+            object-fit: contain;
+        }
+        &-3 {
+            width: 15%;
+            object-fit: contain;
+        }
+        &-4 {
+            width: 7%;
+            object-fit: contain;
+        }
+        &-5 {
+            width: 10%;
+            object-fit: contain;
+        }
+    }
+}
+
+// Section mon portfolio 
+.portfolio {
+    padding: 40px 50px;
+    position: relative;
+    margin: 0 0 50px 0;
+    background-image: url('/assets/images/svg/backgroundPortfolio.svg');
+    background-size: contain;
+    background-repeat: no-repeat ;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .article {
+        border-radius: 0px 60px;
+        background: $btn-text-color;
+        box-shadow: 0px 4px 22px 0px rgba(18, 120, 246, 0.30);
+        height: 300px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    &__article1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        @media screen and (max-width: 1024px) and (min-width: 768px) {
+            grid-column: span 2;
+        }
+        h2 {
+            margin: 20px 0 0 0;
+            border-left: 8px solid $third-color;
+            padding-left: 10px;
+        }
+    }
+    &__article {
+        &-projet {
+            @include boxPortfolio();
+            transition: all 0.3s ease-in;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 50%;
+            }
+            .ohmyfood {
+                width: 90% !important;
+            }
+            h3 {
+                margin: 0 auto;
+            }
+            i {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                padding: 10px 15px;
+                background: $third-color;
+                border-radius: 25px;
+            }
+        }
+        &-projetX {
+            overflow: hidden;
+            background: transparent;
+            @include boxPortfolio(flex-start, 0%);
+            display: none;
+            color: white;
+            transition: all 0.3s ease-in;
+            h3 {
+                margin: 40px 0 0 0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            p {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            .projetX__logo-langue {
+                .bookiHtml {
+                    width: 30%;
+                }
+                .bookiCss {
+                    margin-top: -4px;
+                    width: 28%;
+                }
+            }
+            a {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                padding: 10px 15px;
+                background: $third-color;
+                color: black;
+                border-radius: 25px;
+            }
+        }
+    }
+}

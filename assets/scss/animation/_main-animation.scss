@@ -1,0 +1,33 @@
+// Image 1 tourne en rond 
+.developer__img-content-1 {
+    animation: turnAround 40s both ease infinite;
+    -webkit-animation: turnAround 40s both ease infinite;
+}
+
+// Image 2 tourne en rond
+.developer__img-content-2 {
+    animation: turnAround 30s both ease infinite reverse;
+    -webkit-animation: turnAround 30s both ease infinite reverse;
+}
+
+// Section portfolio 
+.portfolio {
+    .article:hover {
+        background: linear-gradient(180deg, $main-color, $btn-text-color);
+        border-radius: 60px 60px 0 60px;
+        transition: all 0.3s ease-in-out;
+    }
+    .article:hover .hiddenOnHover {
+        display: none;
+        overflow: hidden;
+        transition: all 0.3s ease-in;
+    }
+    .article:hover .showOnHover {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        overflow: visible;
+        transition: all 0.3s ease-in;
+    }
+}
