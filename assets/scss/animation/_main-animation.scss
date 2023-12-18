@@ -1,13 +1,13 @@
 // Image 1 tourne en rond 
 .developer__img-content-1 {
-    animation: turnAround 40s both ease infinite;
-    -webkit-animation: turnAround 40s both ease infinite;
+    animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
+    -webkit-animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
 }
 
 // Image 2 tourne en rond
 .developer__img-content-2 {
-    animation: turnAround 30s both ease infinite reverse;
-    -webkit-animation: turnAround 30s both ease infinite reverse;
+    animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
+    -webkit-animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
 }
 
 // Section portfolio 
@@ -27,6 +27,8 @@
         height: 100%;
         padding: 0 20px;
         display: flex;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
         overflow: visible;
         transition: all 0.3s ease-in;
     }
