@@ -47,13 +47,18 @@ a {
   margin: 0;
   overflow: hidden;
   padding: 40px 50px;
-  background: url("../../../assets/images/svg/Vector1.svg"), url("../../../assets/images/svg/Vector2.svg");
+  background: url("../images/svg/Vector1.svg"), url("../images/svg/Vector2.svg");
   background-position: center center, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%, 100% 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .developer {
+    flex-direction: column;
+  }
 }
 .developer article {
   width: 50%;
