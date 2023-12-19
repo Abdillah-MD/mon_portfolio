@@ -12,17 +12,17 @@
     flex-direction: row;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 40px 20px;
         height: 100vh;
-        background: none;
+        justify-content: space-evenly;
+        background: url("../images/photo/Portfoliobcg.png");
     }
     // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
     article {
         width: 50%;
         @media screen and (max-width: 768px) {
             width: 100%;
-            height: 100%;
             box-sizing: border-box;
         }
     }
@@ -37,24 +37,35 @@
         align-items: flex-start;
         @media screen and (max-width: 768px) {
             padding: 10px 20px;
+            display: block;
             margin: 0;
             width: 100%;
+            color: white;
+            text-shadow: 2px 2px 6px black;
             height: auto; 
         }
         h1 {
             font-size: 50px;
             @media screen and (max-width: 768px) {
                 font-size: 28px;
+                height: 100px;
             }
         }
 
         p {
             margin: 50px auto 60px auto;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
         button {
             @include bouton();
-
+            @media screen and (max-width: 768px) {
+                background: $third-color;
+                color: black;
+                display: none;
+            }
             .fa-chevron-right {
                 font-size: 10px;
             }
@@ -97,11 +108,7 @@
                 top: 60%;
                 transform: translate(-50%, -50%);
                 @media screen and (max-width: 768px) {
-                    top: 50%;
-                    left: 50%;
-                    width: 90%;
-                    transform: translate( -50%, -50%);
-                    -webkit-transform: translate( -50%, -50%);
+                    display: none;
                 }
                 @media screen and (min-width: 1024px) {
                     width: 140%;
@@ -119,11 +126,7 @@
                 top: 60%;
                 transform: translate(-50%, -50%) rotate(-20deg);
                 @media screen and (max-width: 768px) {
-                    width: 115%;
-                    top: 45%;
-                    left: 57%;
-                    transform: translate( -50%, -50% );
-                    -webkit-transform: translate( -50%, -50% );
+                    display: none;
                 }
                 svg {
                     width: 100%;
@@ -195,6 +198,9 @@
 
         img {
             width: 30%;
+            @media screen and (max-width: 768px) {
+                width: 80%;
+            }
         }
 
         .num_1 {
@@ -206,6 +212,9 @@
             background-color: $main-color;
             color: $btn-text-color;
             font-weight: bold;
+            @media screen and (max-width: 768px) {
+                left: 5px;
+            }
         }
 
         .num_1::after {
@@ -218,80 +227,130 @@
             border-left: 3px dashed $main-color;
             display: block;
             z-index: -1;
+        
         }
 
         // Partie html
         &--html {
             @include langueArticleDisplay();
-
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             &-img {
                 text-align: right;
-                width: 43%
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
             }
 
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                    font-size: 12px;
+                }
             }
         }
 
         // Partie Css
         &--css {
             @include langueArticleDisplay(row-reverse);
-
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                @include langueArticleDisplay();
+            }
             &-img {
                 text-align: left;
-                width: 43%
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
             }
 
             &-text {
                 @include langueInformatique();
                 border-radius: 25px 0 0 25px;
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                    font-size: 12px;
+                }
             }
         }
 
         // Partie Javascript
         &--js {
             @include langueArticleDisplay(row);
-
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                @include langueArticleDisplay();
+            }
             &-img {
                 text-align: right;
-                width: 43%
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
             }
 
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                    font-size: 12px;
+                }
             }
         }
 
         // Partie sass
         &--sass {
             @include langueArticleDisplay(row-reverse);
-
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                @include langueArticleDisplay();
+            }
             &-img {
                 text-align: left;
-                width: 43%
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
             }
 
             &-text {
                 @include langueInformatique();
                 border-radius: 25px 0 0 25px;
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                    font-size: 12px;
+                }
             }
         }
 
         // Partie react
         &--react {
             @include langueArticleDisplay(row);
-
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                @include langueArticleDisplay();
+            }
             &-img {
                 text-align: right;
-                width: 43%
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
             }
 
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -376,6 +435,9 @@
         height: 300px;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
+        @media screen and (max-width: 768px) {
+            height: 230px;
+        }
     }
 
     &__article1 {
@@ -412,6 +474,14 @@
 
             h3 {
                 margin: 0 auto;
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+            p {
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
 
             i {
@@ -421,6 +491,10 @@
                 padding: 10px 15px;
                 background: $third-color;
                 border-radius: 25px;
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                    padding: 5px;
+                }
             }
         }
 
@@ -437,10 +511,16 @@
             h3 {
                 margin: 40px 0 0 0;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
 
             p {
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
 
             .projetX__logo-langue {
@@ -462,6 +542,10 @@
                 background: $third-color;
                 color: black;
                 border-radius: 25px;
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                    padding: 5px;
+                }
             }
         }
 

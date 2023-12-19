@@ -64,11 +64,11 @@ a {
   .header i {
     display: block;
     padding: 15px;
-    background: #1278f6;
+    background: black;
     color: white;
     box-sizing: border-box;
     border-radius: 25px;
-    margin: 15px 0 0 0;
+    margin: 0;
     height: 50px;
     display: flex;
     align-items: center;
@@ -91,10 +91,11 @@ a {
 }
 @media screen and (max-width: 768px) {
   .developer {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 40px 20px;
     height: 100vh;
-    background: none;
+    justify-content: space-evenly;
+    background: url("../images/photo/Portfoliobcg.png");
   }
 }
 .developer article {
@@ -103,7 +104,6 @@ a {
 @media screen and (max-width: 768px) {
   .developer article {
     width: 100%;
-    height: 100%;
     box-sizing: border-box;
   }
 }
@@ -119,8 +119,11 @@ a {
 @media screen and (max-width: 768px) {
   .developer__text {
     padding: 10px 20px;
+    display: block;
     margin: 0;
     width: 100%;
+    color: white;
+    text-shadow: 2px 2px 6px black;
     height: auto;
   }
 }
@@ -130,10 +133,16 @@ a {
 @media screen and (max-width: 768px) {
   .developer__text h1 {
     font-size: 28px;
+    height: 100px;
   }
 }
 .developer__text p {
   margin: 50px auto 60px auto;
+}
+@media screen and (max-width: 768px) {
+  .developer__text p {
+    display: none;
+  }
 }
 .developer__text button {
   background-color: black;
@@ -141,6 +150,13 @@ a {
   border: none;
   border-radius: 25px;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .developer__text button {
+    background: #FCDDEC;
+    color: black;
+    display: none;
+  }
 }
 .developer__text button .fa-chevron-right {
   font-size: 10px;
@@ -188,11 +204,7 @@ a {
 }
 @media screen and (max-width: 768px) {
   .developer__img-content-1 {
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -213,11 +225,7 @@ a {
 }
 @media screen and (max-width: 768px) {
   .developer__img-content-2 {
-    width: 115%;
-    top: 45%;
-    left: 57%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    display: none;
   }
 }
 .developer__img-content-2 svg {
@@ -282,6 +290,11 @@ a {
 .langue__programation img {
   width: 30%;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation img {
+    width: 80%;
+  }
+}
 .langue__programation .num_1 {
   position: absolute;
   left: 50%;
@@ -291,6 +304,11 @@ a {
   background-color: #1278f6;
   color: white;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation .num_1 {
+    left: 5px;
+  }
 }
 .langue__programation .num_1::after {
   position: absolute;
@@ -309,9 +327,19 @@ a {
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--html {
+    width: 100%;
+  }
+}
 .langue__programation--html-img {
   text-align: right;
   width: 43%;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--html-img {
+    width: 20%;
+  }
 }
 .langue__programation--html-text {
   width: 35%;
@@ -320,15 +348,35 @@ a {
   padding: 10px 30px;
   border-radius: 0 25px 25px 0;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--html-text {
+    width: 70%;
+    font-size: 12px;
+  }
+}
 .langue__programation--css {
   margin: 30px 0 0 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--css {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .langue__programation--css-img {
   text-align: left;
   width: 43%;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--css-img {
+    width: 20%;
+  }
 }
 .langue__programation--css-text {
   width: 35%;
@@ -337,15 +385,35 @@ a {
   padding: 10px 30px;
   border-radius: 25px 0 0 25px;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--css-text {
+    width: 70%;
+    font-size: 12px;
+  }
+}
 .langue__programation--js {
   margin: 30px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--js {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .langue__programation--js-img {
   text-align: right;
   width: 43%;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--js-img {
+    width: 20%;
+  }
 }
 .langue__programation--js-text {
   width: 35%;
@@ -354,15 +422,35 @@ a {
   padding: 10px 30px;
   border-radius: 0 25px 25px 0;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--js-text {
+    width: 70%;
+    font-size: 12px;
+  }
+}
 .langue__programation--sass {
   margin: 30px 0 0 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--sass {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .langue__programation--sass-img {
   text-align: left;
   width: 43%;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--sass-img {
+    width: 20%;
+  }
 }
 .langue__programation--sass-text {
   width: 35%;
@@ -371,15 +459,35 @@ a {
   padding: 10px 30px;
   border-radius: 25px 0 0 25px;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--sass-text {
+    width: 70%;
+    font-size: 12px;
+  }
+}
 .langue__programation--react {
   margin: 30px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .langue__programation--react {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .langue__programation--react-img {
   text-align: right;
   width: 43%;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--react-img {
+    width: 20%;
+  }
 }
 .langue__programation--react-text {
   width: 35%;
@@ -387,6 +495,12 @@ a {
   background: linear-gradient(180deg, #5ce1e6, white);
   padding: 10px 30px;
   border-radius: 0 25px 25px 0;
+}
+@media screen and (max-width: 768px) {
+  .langue__programation--react-text {
+    width: 70%;
+    font-size: 12px;
+  }
 }
 
 .outils {
@@ -466,6 +580,11 @@ a {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .portfolio .article {
+    height: 230px;
+  }
+}
 .portfolio__article1 {
   display: flex;
   flex-direction: column;
@@ -504,6 +623,16 @@ a {
 .portfolio__article-projet h3 {
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .portfolio__article-projet h3 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio__article-projet p {
+    font-size: 12px;
+  }
+}
 .portfolio__article-projet i {
   position: absolute;
   right: 20px;
@@ -511,6 +640,12 @@ a {
   padding: 10px 15px;
   background: #FCDDEC;
   border-radius: 25px;
+}
+@media screen and (max-width: 768px) {
+  .portfolio__article-projet i {
+    font-size: 10px;
+    padding: 5px;
+  }
 }
 .portfolio__article-projetX {
   overflow: hidden;
@@ -533,8 +668,18 @@ a {
   margin: 40px 0 0 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+@media screen and (max-width: 768px) {
+  .portfolio__article-projetX h3 {
+    font-size: 12px;
+  }
+}
 .portfolio__article-projetX p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .portfolio__article-projetX p {
+    font-size: 12px;
+  }
 }
 .portfolio__article-projetX .projetX__logo-langue .bookiHtml {
   width: 30%;
@@ -551,6 +696,12 @@ a {
   background: #FCDDEC;
   color: black;
   border-radius: 25px;
+}
+@media screen and (max-width: 768px) {
+  .portfolio__article-projetX a {
+    font-size: 10px;
+    padding: 5px;
+  }
 }
 .portfolio .showMore {
   position: absolute;
