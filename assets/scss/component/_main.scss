@@ -16,7 +16,8 @@
         padding: 40px 20px;
         height: 100vh;
         justify-content: space-evenly;
-        background: url("../images/photo/Portfoliobcg.png");
+        background: url("../images/photo/cocotier.png");
+        background-size: 100% 100%;
     }
     // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
     article {
@@ -437,6 +438,7 @@
         transition: all 0.3s ease-in-out;
         @media screen and (max-width: 768px) {
             height: 230px;
+            border-radius: 0 30px;
         }
     }
 
