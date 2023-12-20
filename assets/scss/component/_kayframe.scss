@@ -1,3 +1,4 @@
+// Cercle infini
 @keyframes turnAround {
     0% {
         left: 50%;
@@ -8,5 +9,76 @@
         left: 50%;
         top: 60%;
         transform: translate( -50%, -50%) rotate(359deg);
+    }
+}
+
+// Apparition depuis le droite des éléments section langue informatique 
+@keyframes apparitionDroiteMobile {
+    0% {
+        transform: translateX(2000px) scale(1);
+        -webkit-transform: translateX(2000px) scale(1);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(150px) scale(1.1, 0.7);
+        -webkit-transform: translateX(200px) scale(1.1, 0.7);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(-30px) scale(0.8, 1.2);
+        -webkit-transform: translateX(-30px) scale(0.8, 1.2);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateX(30px) scale(0.9, 1.1);
+        -webkit-transform: translateX(30px) scale(0.9, 1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        -webkit-transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+// Apparance invisible
+@keyframes invisibleElement {
+    to {
+        opacity: 1;
+    }
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes resteFixe {
+    to {
+        transform: translateX(0) scale(1);
+        -webkit-transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+    from {
+        transform: translateX(0) scale(1);
+        -webkit-transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+// Apparition plouf 
+@keyframes numeroPloof {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        opacity: 1;
     }
 }

@@ -16,7 +16,7 @@
         padding: 40px 20px;
         height: 100vh;
         justify-content: space-evenly;
-        background: url("../images/photo/cocotier.png");
+        background: linear-gradient(180deg, #6caeff, white);
         background-size: 100% 100%;
     }
     // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
@@ -41,8 +41,8 @@
             display: block;
             margin: 0;
             width: 100%;
-            color: white;
-            text-shadow: 2px 2px 6px black;
+            color: black;
+            text-shadow: 2px 2px 6px $third-color;
             height: auto; 
         }
         h1 {
@@ -107,6 +107,8 @@
                 height: 165%;
                 left: 50%;
                 top: 60%;
+                scale: none;
+                translate: none;
                 transform: translate(-50%, -50%);
                 @media screen and (max-width: 768px) {
                     display: none;
@@ -125,6 +127,8 @@
                 height: 220%;
                 left: 50%;
                 top: 60%;
+                scale: none;
+                translate: none;
                 transform: translate(-50%, -50%) rotate(-20deg);
                 @media screen and (max-width: 768px) {
                     display: none;
@@ -141,6 +145,8 @@
                 width: 130%;
                 left: 60%;
                 top: 30%;
+                translate: none;
+                scale: none;
                 transform: translate(-50%, -50%);
                 @media screen and (max-width: 768px) {
                     width: 100%;
@@ -183,13 +189,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    @media screen and (max-width: 768px) {
+        padding: 0 20px;
+    }
     &__text {
         text-align: center;
         padding: 0 140px;
         @media screen and (max-width: 768px) {
             padding: 0 20px;
-            
+        }
+        p {
+            @media screen and (max-width: 768px) {
+                text-align: justify;
+            }
         }
     }
 
@@ -197,48 +209,33 @@
         position: relative;
         overflow: hidden;
 
-        img {
+        .imgHiddenOnMobile {
             width: 30%;
             @media screen and (max-width: 768px) {
-                width: 80%;
+                width: 0%;
             }
-        }
-
-        .num_1 {
-            position: absolute;
-            left: 50%;
-            top: 10%;
-            padding: 10px 15px;
-            border-radius: 25px;
-            background-color: $main-color;
-            color: $btn-text-color;
-            font-weight: bold;
-            @media screen and (max-width: 768px) {
-                left: 5px;
-            }
-        }
-
-        .num_1::after {
-            position: absolute;
-            content: " ";
-            left: 50%;
-            top: 20%;
-            transform: translate(-50%, -50%);
-            height: 2500px;
-            border-left: 3px dashed $main-color;
-            display: block;
-            z-index: -1;
-        
         }
 
         // Partie html
         &--html {
             @include langueArticleDisplay();
+            position: relative;
+            .num_1 {
+                @include numeroLangue();
+                @media screen and (max-width: 768px) {
+                    left: 5px;
+                    opacity: 0;
+                }
+            }
+    
+            .num_1::after {
+                @include numeroLangueAfter();
+            }
             @media screen and (max-width: 768px) {
                 width: 100%;
             }
             &-img {
-                text-align: right;
+                text-align: center;
                 width: 43%;
                 @media screen and (max-width: 768px) {
                     width: 20%;
@@ -248,9 +245,24 @@
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                position: relative;
+                transform: translateX(2000px) scale(1);
+                -webkit-transform: translateX(2000px) scale(1);
+                opacity: 0;
+                img {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        width: 10%;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
                 @media screen and (max-width: 768px) {
-                    width: 70%;
-                    font-size: 12px;
+                    width: 80%;
+                    font-size: 10px;
+                    padding: 10px 15px;
                 }
             }
         }
@@ -258,12 +270,24 @@
         // Partie Css
         &--css {
             @include langueArticleDisplay(row-reverse);
+            position: relative;
+            .num_2 {
+                @include numeroLangue();
+                @media screen and (max-width: 768px) {
+                    left: 5px;
+                    opacity: 0;
+                }
+            }
+    
+            .num_2::after {
+                @include numeroLangueAfter();
+            }
             @media screen and (max-width: 768px) {
                 width: 100%;
                 @include langueArticleDisplay();
             }
             &-img {
-                text-align: left;
+                text-align: center;
                 width: 43%;
                 @media screen and (max-width: 768px) {
                     width: 20%;
@@ -272,10 +296,25 @@
 
             &-text {
                 @include langueInformatique();
-                border-radius: 25px 0 0 25px;
+                border-radius: 0 25px 25px 0;
+                position: relative;
+                transform: translateX(2000px) scale(1);
+                -webkit-transform: translateX(2000px) scale(1);
+                opacity: 0;
+                img {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        width: 10%;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
                 @media screen and (max-width: 768px) {
-                    width: 70%;
-                    font-size: 12px;
+                    width: 80%;
+                    font-size: 10px;
+                    padding: 10px 15px;
                 }
             }
         }
@@ -283,12 +322,24 @@
         // Partie Javascript
         &--js {
             @include langueArticleDisplay(row);
+            position: relative;
+            .num_3 {
+                @include numeroLangue();
+                @media screen and (max-width: 768px) {
+                    left: 5px;
+                    opacity: 0;
+                }
+            }
+    
+            .num_3::after {
+                @include numeroLangueAfter();
+            }
             @media screen and (max-width: 768px) {
                 width: 100%;
                 @include langueArticleDisplay();
             }
             &-img {
-                text-align: right;
+                text-align: center;
                 width: 43%;
                 @media screen and (max-width: 768px) {
                     width: 20%;
@@ -298,9 +349,24 @@
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                position: relative;
+                transform: translateX(2000px) scale(1);
+                -webkit-transform: translateX(2000px) scale(1);
+                opacity: 0;
+                img {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        width: 10%;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
                 @media screen and (max-width: 768px) {
-                    width: 70%;
-                    font-size: 12px;
+                    width: 80%;
+                    font-size: 10px;
+                    padding: 10px 15px;
                 }
             }
         }
@@ -308,37 +374,24 @@
         // Partie sass
         &--sass {
             @include langueArticleDisplay(row-reverse);
+            position: relative;
+            .num_4 {
+                @include numeroLangue();
+                @media screen and (max-width: 768px) {
+                    left: 5px;
+                    opacity: 0;
+                }
+            }
+    
+            .num_4::after {
+                @include numeroLangueAfter();
+            }
             @media screen and (max-width: 768px) {
                 width: 100%;
                 @include langueArticleDisplay();
             }
             &-img {
-                text-align: left;
-                width: 43%;
-                @media screen and (max-width: 768px) {
-                    width: 20%;
-                }
-            }
-
-            &-text {
-                @include langueInformatique();
-                border-radius: 25px 0 0 25px;
-                @media screen and (max-width: 768px) {
-                    width: 70%;
-                    font-size: 12px;
-                }
-            }
-        }
-
-        // Partie react
-        &--react {
-            @include langueArticleDisplay(row);
-            @media screen and (max-width: 768px) {
-                width: 100%;
-                @include langueArticleDisplay();
-            }
-            &-img {
-                text-align: right;
+                text-align: center;
                 width: 43%;
                 @media screen and (max-width: 768px) {
                     width: 20%;
@@ -348,9 +401,76 @@
             &-text {
                 @include langueInformatique();
                 border-radius: 0 25px 25px 0;
+                position: relative;
+                transform: translateX(2000px) scale(1);
+                -webkit-transform: translateX(2000px) scale(1);
+                opacity: 0;
+                img {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        width: 10%;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
                 @media screen and (max-width: 768px) {
-                    width: 70%;
-                    font-size: 12px;
+                    width: 80%;
+                    font-size: 10px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        // Partie react
+        &--react {
+            @include langueArticleDisplay(row);
+            position: relative;
+            .num_5 {
+                @include numeroLangue();
+                @media screen and (max-width: 768px) {
+                    left: 5px;
+                    opacity: 0;
+                }
+            }
+    
+            .num_5::after {
+                @include numeroLangueAfter();
+            }
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                @include langueArticleDisplay();
+            }
+            &-img {
+                text-align: center;
+                width: 43%;
+                @media screen and (max-width: 768px) {
+                    width: 20%;
+                }
+            }
+
+            &-text {
+                @include langueInformatique();
+                border-radius: 0 25px 25px 0;
+                position: relative;
+                transform: translateX(2000px) scale(1);
+                -webkit-transform: translateX(2000px) scale(1);
+                opacity: 0;
+                img {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        width: 10%;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    width: 80%;
+                    font-size: 10px;
+                    padding: 10px 15px;
                 }
             }
         }
@@ -494,8 +614,10 @@
                 background: $third-color;
                 border-radius: 25px;
                 @media screen and (max-width: 768px) {
-                    font-size: 10px;
+                    font-size: 12px;
                     padding: 5px;
+                    bottom: 10px;
+                    right: 10px;
                 }
             }
         }

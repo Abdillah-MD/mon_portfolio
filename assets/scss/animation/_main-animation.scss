@@ -10,7 +10,26 @@
     -webkit-animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
 }
 
-// Section portfolio 
+//////////// Section langue informatique ///////////
+// Apparition depuis droite Mobile
+.langue__programation {
+    .js-apparitionDroite {
+        animation: apparitionDroiteMobile 0.9s ease-out forwards;
+        -webkit-animation: apparitionDroiteMobile 0.9s ease-out forwards;
+    }
+    .js-numberApparition {
+        animation: numeroPloof 0.4s ease-out forwards;
+        -webkit-animation: numeroPloof 0.4s ease-out forwards;
+    }
+    .js-apparanceInvisible {
+        @media screen and (max-width: 768px) {
+            animation: invisibleElement 0.9s ease-out 1 both;
+            -webkit-animation: invisibleElement 0.9s ease-out 1 both;
+        }
+    }
+}
+
+//////////// Section portfolio  /////////////////
 .portfolio {
     .article:hover {
         background: linear-gradient(180deg, $main-color, $btn-text-color);
