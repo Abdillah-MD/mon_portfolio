@@ -16,7 +16,8 @@
         padding: 40px 20px;
         height: 100vh;
         justify-content: space-evenly;
-        background: linear-gradient(180deg, #6caeff, white);
+        background: linear-gradient(180deg, $main-color, $main-color, white);
+        background-image: url('../images/photo/cocotier.png');
         background-size: 100% 100%;
     }
     // cursor: url('/assets/images/svg/cursor.svg') 50 50, auto;
@@ -41,8 +42,8 @@
             display: block;
             margin: 0;
             width: 100%;
-            color: black;
-            text-shadow: 2px 2px 6px $third-color;
+            color: white;
+            text-shadow: 2px 2px 6px black;
             height: auto; 
         }
         h1 {
@@ -547,6 +548,7 @@
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
+        padding: 40px 15px;
     }
 
     .article {

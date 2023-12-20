@@ -1,3 +1,8 @@
+///////// Section Developer  //////////////
+.main {
+    animation: helloHand 1s ease 3s 1 backwards;
+}
+
 // Image 1 tourne en rond 
 .developer__img-content-1 {
     animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
