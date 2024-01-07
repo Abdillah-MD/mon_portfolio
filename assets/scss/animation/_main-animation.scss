@@ -4,13 +4,13 @@
 }
 
 // Image 1 tourne en rond 
-.developer__img-content-1 {
+.cercle1 {
     animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
-    -webkit-animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
+    -webkit-animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;   
 }
 
 // Image 2 tourne en rond
-.developer__img-content-2 {
+.cercle2 {
     animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
     -webkit-animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
 }
