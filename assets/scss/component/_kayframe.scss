@@ -102,3 +102,56 @@
         -webkit-transform: rotate(-3deg) translate(0) scale(1);
     }
 }
+
+// Animation aléatoire 
+@keyframes driftAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(0, 400px);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(-200px, 0);
+        opacity: 1;
+    }
+    60% {
+        transform: translate(0, -400px);
+    }
+    80% {
+        transform: translate(200px, 0);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes driftAnimationMobile {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(0, -250px);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(250px, 0);
+        opacity: 1;
+    }
+    60% {
+        transform: translate(0, 250px);
+    }
+    80% {
+        transform: translate(-250px, 0);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}

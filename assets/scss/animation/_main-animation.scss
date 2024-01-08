@@ -4,15 +4,17 @@
 }
 
 // Image 1 tourne en rond 
-.cercle1 {
+.developer__img-content-1 {
     animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;
     -webkit-animation: turnAround 30s both cubic-bezier(.49,.47,.7,.71) infinite;   
+    transform-origin: center center;
 }
 
 // Image 2 tourne en rond
-.cercle2 {
+.developer__img-content-2 {
     animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
     -webkit-animation: turnAround 20s both cubic-bezier(.49,.47,.7,.71) infinite reverse;
+    transform-origin: center center;
 }
 
 //////////// Section langue informatique ///////////
@@ -32,6 +34,19 @@
             -webkit-animation: invisibleElement 0.9s ease-out 1 both;
         }
     }
+}
+
+.logoMobileFloat {
+    animation: driftAnimation 20s linear infinite both;
+    @media screen and (max-width: 768px) {
+        animation: driftAnimationMobile 20s linear infinite both;
+    }
+    @for $i from 1 through 5 {
+        &--#{$i} {
+            animation-delay: 4s * $i;
+        }
+    }
+
 }
 
 //////////// Section portfolio  /////////////////
@@ -60,3 +75,4 @@
         transition: all 0.3s ease-in;
     }
 }
+
