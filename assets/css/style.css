@@ -1113,6 +1113,9 @@ a {
 .logoMobileFloat--5 {
   animation-delay: 20s;
 }
+.logoMobileFloat--6 {
+  animation-delay: 24s;
+}
 
 .portfolio .article:hover {
   background: linear-gradient(180deg, #1278f6, white);
