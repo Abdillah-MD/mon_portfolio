@@ -1099,22 +1099,22 @@ a {
   }
 }
 .logoMobileFloat--1 {
-  animation-delay: 4s;
+  animation-delay: 3.33s;
 }
 .logoMobileFloat--2 {
-  animation-delay: 8s;
+  animation-delay: 6.66s;
 }
 .logoMobileFloat--3 {
-  animation-delay: 12s;
+  animation-delay: 9.99s;
 }
 .logoMobileFloat--4 {
-  animation-delay: 16s;
+  animation-delay: 13.32s;
 }
 .logoMobileFloat--5 {
-  animation-delay: 20s;
+  animation-delay: 16.65s;
 }
 .logoMobileFloat--6 {
-  animation-delay: 24s;
+  animation-delay: 19.98s;
 }
 
 .portfolio .article:hover {

@@ -43,7 +43,7 @@
     }
     @for $i from 1 through 6 {
         &--#{$i} {
-            animation-delay: 4s * $i;
+            animation-delay: 3.33s * $i;
         }
     }
 
